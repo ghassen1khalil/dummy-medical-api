@@ -1,0 +1,59 @@
+openapi: 3.0.3
+info:
+  title: Medical Reference API
+  version: 1.0.0
+  description: >-
+    Proof of concept API providing reference data for medical asset and act types.
+servers:
+  - url: http://localhost:8080
+paths:
+  /api/v1/medical-asset-types:
+    get:
+      summary: List available medical asset types
+      responses:
+        '200':
+          description: Successful retrieval of medical asset types
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MedicalAssetType'
+  /api/v1/medical-acts-type:
+    get:
+      summary: List available medical act types
+      responses:
+        '200':
+          description: Successful retrieval of medical act types
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MedicalActType'
+components:
+  schemas:
+    MedicalAssetType:
+      type: object
+      properties:
+        code:
+          type: string
+          example: VENT
+        label:
+          type: string
+          example: Ventilator
+        description:
+          type: string
+          example: Mechanical ventilator for assisted breathing
+    MedicalActType:
+      type: object
+      properties:
+        code:
+          type: string
+          example: CONSULT
+        label:
+          type: string
+          example: General Consultation
+        category:
+          type: string
+          example: Consultation
