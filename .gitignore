@@ -1,0 +1,59 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Build output
+/target/
+/out/
+
+# Maven
+!/.mvn/wrapper/maven-wrapper.jar
+.mvn/timing.properties
+dependency-reduced-pom.xml
+release.properties
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+buildNumber.properties
+
+# IntelliJ IDEA
+/.idea/
+/*.iml
+/*.iws
+.idea_modules/
+
+# IDE / editor
+.project
+.classpath
+.settings/
+nbproject/
+
+# Logs
+*.log
+logs/
+hs_err_pid*
+
+# Test / coverage reports
+/target/surefire-reports/
+/target/failsafe-reports/
+/coverage/
+jacoco.exec
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temp files
+tmp/
+temp/
+*.tmp
+
+# Environment / secrets
+.env
+*.secret
+.secret.*
+
+# Generated sources
+/generated/

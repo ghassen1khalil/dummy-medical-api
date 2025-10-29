@@ -36,7 +36,7 @@ public class MedicalReferenceController {
         return ASSET_TYPES;
     }
 
-    @GetMapping("/medical-acts-type")
+    @GetMapping("/medical-act-types")
     @Operation(summary = "List available medical act types")
     public List<MedicalActType> getMedicalActTypes() {
         return ACT_TYPES;
